@@ -1,33 +1,40 @@
 from django.db import models
 
 class Permission(models.Model):
-    name
-    description
+    name = models.CharField(max_length=50)
+    description = models.TextField()
 
 class Role(models.Model):
-    name
+    name = models.CharField(max_length=50)
 
 class RolePermission(models.Model):
-    role
-    permission
+    role = models.ForeignKey(Role, on_delete=models.CASCADE)
+    permission = models.ForeignKey(Permission, on_delete=models.CASCADE)
 
 class Admin(models.Model):
     name = models.CharField(max_length=20)
     email = models.EmailField()
     password = models.CharField(max_length=30)
-    role_id = models.ForeignKey(Role, on_delete=models.CASCADE)
-    created_at = models.DateTimeField()
-    active = models.BooleanField()
+    role = models.ForeignKey(Role, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+    active = models.BooleanField(default=True)
 
 class Content(models.Model):
-    title
-    description
-    content_type
-    url
-    created_at
-    active
+
+    class ContentType(models.IntegerChoices):
+        VIDEO = 0, 'Video'
+        PHOTO = 1, 'Photo'
+        DESIGN_3D = 2, '3D Design'
+        GRAPHIC_DESIGN = 3, 'Graphic Design'
+
+    title = models.CharField(max_length=50)
+    description = models.TextField()
+    content_type = models.IntegerField(choices=ContentType.choices)
+    url = models.URLField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    active = models.BooleanField(default=True)
 
 class AdminContent(models.Model):
-    admin
-    content
-    modified_at
+    admin = models.ForeignKey(Admin, on_delete=models.CASCADE)
+    content = models.ForeignKey(Content, on_delete=models.CASCADE)
+    modified_at = models.DateTimeField(auto_now=True)
