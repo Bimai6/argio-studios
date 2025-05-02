@@ -1,32 +1,5 @@
 from django.db import models
-
-class Permission(models.Model):
-    name = models.CharField(max_length=50)
-    description = models.TextField()
-
-    def __str__(self):
-        return self.name
-
-class Role(models.Model):
-    name = models.CharField(max_length=50)
-
-    def __str__(self):
-        return self.name
-
-class RolePermission(models.Model):
-    role = models.ForeignKey(Role, on_delete=models.CASCADE)
-    permission = models.ForeignKey(Permission, on_delete=models.CASCADE)
-
-class Admin(models.Model):
-    name = models.CharField(max_length=20)
-    email = models.EmailField()
-    password = models.CharField(max_length=30)
-    role = models.ForeignKey(Role, on_delete=models.CASCADE)
-    created_at = models.DateTimeField(auto_now_add=True)
-    active = models.BooleanField(default=True)
-
-    def __str__(self):
-        return self.name
+from django.contrib.auth.models import User 
 
 class Content(models.Model):
 
@@ -41,12 +14,12 @@ class Content(models.Model):
     content_type = models.IntegerField(choices=ContentType.choices)
     url = models.URLField()
     created_at = models.DateTimeField(auto_now_add=True)
-    active = models.BooleanField(default=True)
+    is_active = models.BooleanField(default=True)
 
     def __str__(self):
         return self.title
 
 class AdminContent(models.Model):
-    admin = models.ForeignKey(Admin, on_delete=models.CASCADE)
+    admin = models.ForeignKey(User, on_delete=models.CASCADE)
     content = models.ForeignKey(Content, on_delete=models.CASCADE)
     modified_at = models.DateTimeField(auto_now=True)
