@@ -3,7 +3,7 @@ from django.apps import AppConfig
 
 class ArgioappConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'argioapp'
+    name = 'argiobackend.argioapp'
 
     def ready(self):
-        import argioapp.signals
+        import argiobackend.argioapp.signals
