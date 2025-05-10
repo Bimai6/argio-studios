@@ -10,9 +10,11 @@ useEffect(() => {
 }, []);
 
 return (
-  <div className="">
+  <div className="grid grid-cols-3 gap-4">
       {contents.map((content) => (
-          <img key={content.id} src={content.url} alt={content.title} />
+        <div key={content.id} className="p-4 w-1/3">
+            <img src={content.url} alt={content.title} className="max-w-80 h-auto rounded-lg"/>
+        </div>
       ))}
   </div>
 );
