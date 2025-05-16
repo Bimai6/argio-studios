@@ -1,6 +1,14 @@
+import ContactForm from "../../components/ContactForm/ContactForm"
+import Nav from "../../components/Nav/Nav"
+
 const Contact = () => {
+
     return(
-        <h1>This is Contact Page</h1>
+        <>
+        <ContactForm />
+        <p>Aquí va una descripción que el equipo de ArgioStudios tiene que proveer al desarrollador...</p>
+        <Nav />
+        </>
     )
 }
 

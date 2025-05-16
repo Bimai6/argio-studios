@@ -1,6 +1,11 @@
+import Nav from "../../components/Nav/Nav"
+
+
 const AboutUs = () => {
     return(
-        <h1>This is AboutUs Page</h1>
+        <>
+        <Nav></Nav>
+        </>
     )
 }
 
