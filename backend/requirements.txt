@@ -3,6 +3,7 @@ colorama==0.4.6
 Django==5.2
 django-cors-headers==4.7.0
 django-extensions==4.1
+django-filter==25.1
 djangorestframework==3.16.0
 extensions==0.4
 git-filter-repo==2.47.0
