@@ -6,14 +6,14 @@ const Home = () => {
     return(
         <>
             <div>
-                <Link to='/catalogue'>videos</Link>
+                <Link to='/catalogue?content_type=0'>vídeos</Link>
             </div>
             <div>
-                <Link to='/catalogue'>diseño gráfico</Link>
-                <Link to='/catalogue'>diseño 3d</Link>
+                <Link to='/catalogue?content_type=3'>diseño gráfico</Link>
+                <Link to='/catalogue?content_type=2'>diseño 3D</Link>
             </div>
             <div>
-                <Link to='/catalogue'>fotos</Link>
+                <Link to='/catalogue?content_type=1'>fotos</Link>
             </div>
             <Nav/>
         </>

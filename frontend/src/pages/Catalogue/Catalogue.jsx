@@ -1,23 +1,45 @@
-import ListContent from "../../components/ListContent/ListContent"
-import Nav from "../../components/Nav/Nav"
+import { useLocation, useNavigate } from "react-router-dom";
+import ListContent from "../../components/ListContent/ListContent";
+import Nav from "../../components/Nav/Nav";
+
+const filterItems = [
+  { label: "vídeos", value: "0" },
+  { label: "diseño gráfico", value: "3" },
+  { label: "diseño 3D", value: "2" },
+  { label: "fotos", value: "1" },
+];
 
 const Catalogue = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const params = new URLSearchParams(location.search);
+  const contentType = params.get("content_type") || "0";
 
-    const filterItems = ['vídeos', 'diseño gráfico', 'diseño 3D', 'fotos'];
+  const handleChange = (value) => {
+    navigate(`/catalogue?content_type=${value}`);
+  };
 
-    return(
-        <>
-        <div>
-            {filterItems.map((item, index) => {
-                <p key={index}>{item}</p>
-            })}
-        </div>
-        <div className="flex flex-col items-center w-full h-full">
-            <ListContent />
-        </div>
-        <Nav />
-        </>
-    )
-}
+  return (
+    <>
+      <div className="flex justify-center gap-4 p-4">
+        {filterItems.map((item) => (
+          <button
+            key={item.value}
+            onClick={() => handleChange(item.value)}
+            className={`px-4 py-1  ${
+              contentType === item.value ? "rounded-4xl bg-gray-700 text-white" : ""
+            }`}
+          >
+            {item.label}
+          </button>
+        ))}
+      </div>
+      <div className="flex flex-col items-center w-full h-full">
+        <ListContent contentType={contentType} />
+      </div>
+      <Nav />
+    </>
+  );
+};
 
-export default Catalogue
+export default Catalogue;
