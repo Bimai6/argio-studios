@@ -21,13 +21,13 @@ const Catalogue = () => {
 
   return (
     <>
-      <div className="flex justify-center gap-4 p-4">
+      <div className="flex justify-between p-4">
         {filterItems.map((item) => (
           <button
             key={item.value}
             onClick={() => handleChange(item.value)}
             className={`px-4 py-1  ${
-              contentType === item.value ? "rounded-4xl bg-gray-700 text-white" : ""
+              contentType === item.value ? "rounded-4xl bg-[#343434] text-white" : ""
             }`}
           >
             {item.label}
