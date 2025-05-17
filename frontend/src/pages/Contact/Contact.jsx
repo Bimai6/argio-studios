@@ -5,8 +5,10 @@ const Contact = () => {
 
     return(
         <>
-        <ContactForm />
-        <p>Aquí va una descripción que el equipo de ArgioStudios tiene que proveer al desarrollador...</p>
+        <div className="flex">
+            <ContactForm/>
+            <p className="ml-10 mt-8 mr-8 text-end">Aquí va una descripción que el equipo de ArgioStudios tiene que proveer al desarrollador...</p>
+        </div>
         <Nav />
         </>
     )
