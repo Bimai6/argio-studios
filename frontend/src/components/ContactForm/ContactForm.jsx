@@ -19,34 +19,33 @@ const ContactForm = () => {
             form.current,
             "0a0Ck9woOI2ZR9RZ1"    
         ).then(
-            (result) => {
-                console.log("Correo enviado:", result.text);
+            () => {
                 alert("Correo enviado con éxito");
+                e.target.reset();
             },
-            (error) => {
-                console.error("Error:", error.text);
+            () => {
                 alert("Error al enviar el correo");
             }
         );
-
-        e.target.reset();
     };
 
     const attributes = [
-        {placeholder: "nombre completo", name:"full_name"},
-        {placeholder: "email", name:"email"},
-        {placeholder: "título", name:"title"}
+        {type:"text", placeholder: "nombre completo", name:"full_name"},
+        {type:"email", placeholder: "email", name:"email", pattern:"^[^\\s@]+@[^\\s@]+\\.(com|es|net|org|info)$", title: "Por favor, introduce un email con un dominio válido (.com, .es, .org, .net, .info)"},
+        {type:"text", placeholder: "título", name:"title"}
     ];
+
     const stylesGeneric = "rounded-full my-5 py-4 text-white";
     const stylesTextInput = "bg-[#343434] pl-10 placeholder-white";
     
     return (
         <>
-            <form className="flex flex-col mt-5 mr-5 mb-20 ml-8" onSubmit={sendEmail} ref={form}>
+            <form className="contact-form flex flex-col mt-5 mr-5 mb-20 ml-8" onSubmit={sendEmail} ref={form}>
                 {attributes.map((attribute, index) => (
                     <input className={`${stylesGeneric} ${stylesTextInput}`}
-                    key={index} type="text" 
-                    placeholder={attribute.placeholder} name={attribute.name} required/>
+                    key={index} 
+                    {...attribute}
+                    required />
                 ))}
                 <textarea className={`${stylesGeneric} ${stylesTextInput} h-20`} placeholder="mensaje" name="message" required></textarea>
                 <input className={`${stylesGeneric} bg-black mx-25`} type="submit" value="enviar" />
