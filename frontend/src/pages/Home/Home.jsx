@@ -12,9 +12,7 @@ const Home = () => {
                             <Link to={`/catalogue?content_type=${item.value}`}>{item.label}</Link>
                         </div>
                     ))}
-                    <div className="col-start-2 row-start-2">
-                    
-                    </div>
+                    <div className="col-start-2 row-start-2"></div>
                 </div>
                 <Nav />
             </div>
