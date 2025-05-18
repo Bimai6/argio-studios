@@ -142,6 +142,24 @@ npm run test
 
 ---
 
+## Scripts
+
+After you have done the first time setup, you can make use of the scripts as shortcuts to run the server:
+
+-To run backend:
+
+```
+./0_run_back.sh
+```
+
+-To run frontend:
+
+```
+./1_run_front.sh
+```
+
+---
+
 ## Notes
 
 - Do not commit the `.env` file or `.venv/` directory.
