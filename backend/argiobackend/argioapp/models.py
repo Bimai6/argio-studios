@@ -12,9 +12,18 @@ class Content(models.Model):
     title = models.CharField(max_length=50)
     description = models.TextField()
     content_type = models.IntegerField(choices=ContentType.choices)
-    url = models.URLField()
+    url = models.URLField(help_text="Main content URL: YouTube, image, 3D model, etc.")
+    thumbnail_url = models.URLField(blank=True, null=True, help_text="Thumbnail for catalogue view")
     created_at = models.DateTimeField(auto_now_add=True)
     is_active = models.BooleanField(default=True)
+    alt = models.CharField(max_length=50)
+
+    @property
+    def embed_url(self):
+        if self.content_type == self.ContentType.VIDEO and 'youtube.com' in self.url:
+            video_id = self.url.split('v=')[-1].split('&')[0]
+            return f'https://www.youtube.com/embed/{video_id}'
+        return None
 
     def __str__(self):
         return self.title
