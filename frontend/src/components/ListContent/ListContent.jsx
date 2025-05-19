@@ -25,7 +25,7 @@ const ListContent = ({ contentType }) => {
         contents.map((content) => (
           <div key={content.id} className="p-4 w-full">
             <img
-              src={content.url}
+              src={content.thumbnail_url}
               alt={content.title}
               className="max-w-120 w-full h-auto rounded-lg object-contain"
             />
