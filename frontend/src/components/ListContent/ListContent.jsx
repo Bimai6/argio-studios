@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const ListContent = ({ contentType }) => {
   const [contents, setContents] = useState([]);
@@ -24,11 +25,13 @@ const ListContent = ({ contentType }) => {
       {contents.length > 0 ? (
         contents.map((content) => (
           <div key={content.id} className="p-4 w-full">
+          <Link to={`/catalogue/${content.id}`} state={{ content: content }}>
             <img
               src={content.thumbnail_url}
               alt={content.title}
               className="max-w-120 w-full h-auto rounded-lg object-contain"
             />
+          </Link>
           </div>
         ))
       ) : (
