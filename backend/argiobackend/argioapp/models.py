@@ -1,5 +1,6 @@
 from django.db import models
-from django.contrib.auth.models import User 
+from django.contrib.auth.models import User
+from urllib.parse import urlparse, parse_qs
 
 class Content(models.Model):
 
@@ -18,12 +19,23 @@ class Content(models.Model):
     is_active = models.BooleanField(default=True)
     alt = models.CharField(max_length=50)
 
-    @property
-    def embed_url(self):
-        if self.content_type == self.ContentType.VIDEO and 'youtube.com' in self.url:
-            video_id = self.url.split('v=')[-1].split('&')[0]
+    def save(self, *args, **kwargs):
+        if self.content_type == self.ContentType.VIDEO:
+            self.url = self._format_video_url(self.url)
+        super().save(*args, **kwargs)
+
+    def _format_video_url(self, original_url):
+        parsed_url = urlparse(original_url)
+        if 'youtube.com' in parsed_url.netloc:
+            query_params = parse_qs(parsed_url.query)
+            video_id = query_params.get('v')
+            if video_id:
+                return f'https://www.youtube.com/embed/{video_id[0]}'
+        elif 'youtu.be' in parsed_url.netloc:
+            video_id = parsed_url.path.lstrip('/')
             return f'https://www.youtube.com/embed/{video_id}'
-        return None
+        return original_url
+
 
     def __str__(self):
         return self.title
