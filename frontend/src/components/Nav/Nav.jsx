@@ -12,7 +12,7 @@ const Nav = () => {
 
     return (
         <>
-            <nav className="fixed bottom-0 left-0 w-screen h-[110px] z-50 px-4">
+            <nav className="fixed bottom-0 left-0 w-screen h-[110px] px-4">
                 <ul className="grid grid-cols-3 w-full h-full text-center">
                     {navItems.map((item, index) => {
                         const defaultLink = (
