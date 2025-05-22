@@ -1,6 +1,6 @@
 import Nav from "../../components/Nav/Nav"
 import { Link } from "react-router"
-import filterItems from "../../utils/Arrays"
+import { filterItems } from "../../utils/Arrays"
 
 const Home = () => {
     return (
@@ -15,7 +15,7 @@ const Home = () => {
                 <source src="/videos/background_home.mp4" type="video/mp4" />
             </video>
 
-            <div className="fixed top-0 left-0 w-full h-full bg-black opacity-80 -z-10"></div>
+            <div className="fixed top-0 left-0 w-full h-full bg-black opacity-60 -z-10"></div>
 
             <div className="h-screen text-white relative z-50">
                 <div className="grid grid-cols-3 grid-rows-3 h-full place-items-center text-xl sm:text-2xl md:text-4xl xl:text-5xl">
