@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd backend/
+cd "$(dirname "$0")/backend"
 
 source .venv/Scripts/activate
 
