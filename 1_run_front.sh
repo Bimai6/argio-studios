@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cd frontend/
+cd "$(dirname "$0")/frontend"
 
 npm run dev
