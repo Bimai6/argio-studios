@@ -6,6 +6,7 @@ const Home = () => {
     return (
         <>
             <video
+            data-testid= "page-home"
             className="fixed top-0 left-0 w-full h-full object-cover -z-20"
             autoPlay
             muted

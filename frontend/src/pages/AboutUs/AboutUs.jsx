@@ -14,7 +14,7 @@ const AboutUs = () => {
 
     return(
         <>
-            <div className="flex flex-col place-items-center px-20">
+            <div data-testid="page-about-us" className="flex flex-col place-items-center px-20">
                 <div className="flex flex-row justify-center bg-black w-screen">
                     <img src="https://res.cloudinary.com/dr9vuz2td/image/upload/v1747914534/banner_vxlbcw.png" alt="Argio Studios' Banner" className="pt-12 pb-16"/>
                 </div>

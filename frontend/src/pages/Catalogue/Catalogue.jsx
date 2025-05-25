@@ -15,7 +15,7 @@ const Catalogue = () => {
 
     return (
     <>
-        <div className="flex justify-between p-4">
+        <div data-testid="page-catalogue" className="flex justify-between p-4">
             {filterItems.map((item) => (
                 <button
                 key={item.value}
