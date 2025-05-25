@@ -124,22 +124,9 @@ npm run dev
 
 ---
 
-## 4.(NOT IMPLEMENTED YET ⚠️ SKIP THIS ⚠️) Running Tests 
+## 4. Running Tests 
 
-### Backend (Django + Pytest)
-
-Ensure the `.env` file is present in `backend/` and run:
-
-```
-pytest
-```
-
-### Frontend (Vite + React)
-
-```
-npm run test
-```
-
+### Ensure the `.env` file is present in `backend/`, and packages and dependencies are updated for both backend and frontend, then use the associated scripts listed on the following section.
 ---
 
 ## Scripts
@@ -156,6 +143,16 @@ After you have done the first time setup, you can make use of the scripts as sho
 
 ```
 ./1_run_front.sh
+```
+
+### For testing you have:
+
+```
+./2_run_tests_back.sh
+```
+
+```
+./3_run_tests_front.sh
 ```
 
 ---
