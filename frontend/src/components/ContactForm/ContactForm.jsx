@@ -8,7 +8,8 @@ const ContactForm = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        if (form.current.website.value !== '') {
+        const websiteInput = form.current?.elements?.namedItem('website');
+        if (websiteInput?.value !== '') {
             alert('Detectado envío automatizado. Inténtalo de nuevo.');
             return;
         }
@@ -40,7 +41,7 @@ const ContactForm = () => {
     
     return (
         <>
-            <form className="contact-form flex flex-col mt-5 mr-5 mb-20 ml-8" onSubmit={sendEmail} ref={form}>
+            <form aria-label="contact form" className="contact-form flex flex-col mt-5 mr-5 mb-20 ml-8" onSubmit={sendEmail} ref={form}>
                 {attributes.map((attribute, index) => (
                     <input className={`${stylesGeneric} ${stylesTextInput}`}
                     key={index} 
