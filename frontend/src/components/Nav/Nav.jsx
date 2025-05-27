@@ -18,7 +18,7 @@ const Nav = () => {
                         const defaultLink = (
                             <Link
                                 to={item.link}
-                                className={`py-2 px-4 rounded-4xl ${
+                                className={`py-3 px-4 rounded-4xl text-sm sm:text-xl md:text-2xl xl:text-4xl  ${
                                     isHome ? "text-white bg-[#343434]" : "bg-[#D9D9D9]"
                                 }`}
                             >
