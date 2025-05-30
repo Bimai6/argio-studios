@@ -35,7 +35,7 @@ const ListContent = ({ contentType }) => {
           </div>
         ))
       ) : (
-        <p className="text-center col-span-full">No hay contenido en esta categoría.</p>
+          <p className="text-2xl sm:text-3xl xl:text-5xl mt-20 sm:mt-40 xl:mt-60 mx-10 text-center col-span-full">No hay contenido en esta categoría.</p>
       )}
     </div>
   );
