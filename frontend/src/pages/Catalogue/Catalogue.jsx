@@ -15,12 +15,12 @@ const Catalogue = () => {
 
     return (
     <>
-        <div data-testid="page-catalogue" className="flex justify-between p-4">
+        <div data-testid="page-catalogue" className="ml-10 sm:ml-0 flex flex-col items-start sm:flex-row sm:justify-between p-4">
             {filterItems.map((item) => (
                 <button
                 key={item.value}
                 onClick={() => handleChange(item.value)}
-                className={`px-4 py-1  ${
+                className={`px-4 py-2 text-2xl sm:text-xl md:text-2xl xl:text-4xl ${
                 contentType === item.value ? "rounded-4xl bg-[#343434] text-white" : ""
                 }`}
                 >
