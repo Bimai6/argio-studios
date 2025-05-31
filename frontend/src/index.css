@@ -4,7 +4,7 @@ body{
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Space Grotesk", sans-serif !important;
   font-style: normal;
   color: #343434;
   font-size: 2rem;
