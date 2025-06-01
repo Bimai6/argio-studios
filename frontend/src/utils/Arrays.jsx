@@ -5,6 +5,11 @@ export const filterItems = [
     { label: "fotos", value: "1", col: "3", row: "2" },
 ];
 
+export const contactParagraph = [
+    {text: "En Argio Studios siempre estamos abiertos a nuevas oportunidades creativas o simplemente a conectar con personas interesantes. "},
+    {text: "Si quieres proponernos una idea, iniciar una colaboración o simplemente saludarnos, por favor rellena este formulario. Nos pondremos en contacto contigo por correo lo antes posible."}
+]
+
 export const members = [
     { name: "Alvaro Jesús Ramírez", role: "Diseñador Líder", img: "https://res.cloudinary.com/dr9vuz2td/image/upload/v1747901490/1747901322297_ohokoa.jpg", tasks: ["videografía", "fotografía", "diseño 3d", "diseño gráfico"]},
     { name: "Alvaro Jesús Ramírez", role: "Diseñador Líder", img: "https://res.cloudinary.com/dr9vuz2td/image/upload/v1747901490/1747901322297_ohokoa.jpg", tasks: ["videografía", "fotografía", "diseño 3d", "diseño gráfico"]}

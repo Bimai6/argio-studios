@@ -1,13 +1,20 @@
 import ContactForm from "../../components/ContactForm/ContactForm"
 import Nav from "../../components/Nav/Nav"
+import { contactParagraph } from "../../utils/Arrays";
 
 const Contact = () => {
 
     return(
         <>
-        <div data-testid="page-contact" className="flex flex-col xl:flex-row ">
+        <div data-testid="page-contact" className="flex flex-col xl:flex-row justify-center">
             <ContactForm/>
-            <p className="ml-10 xl:ml-60 mt-8 mr-8 text-end">Aquí va una descripción que el equipo de ArgioStudios tiene que proveer al desarrollador...</p>
+            <div className="flex flex-col mt-2 mb-25">
+                {contactParagraph.map((item, key) => {
+                    return(
+                        <p key={key} className="text-xl sm:text-2xl md:text-3xl xl:text-4xl ml-10 xl:ml-30 mt-8 mr-15 text-center xl:text-start">{item.text}</p>
+                    );
+                })}
+            </div>
         </div>
         <Nav />
         </>
