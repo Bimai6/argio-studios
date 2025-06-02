@@ -19,7 +19,7 @@ describe("<Nav />", () => {
                 <Nav />
             </MemoryRouter>
         )
-        expect(screen.getByText(/sobre nosotros/i)).toHaveAttribute("href", "/about-us")
+        expect(screen.getByText(/argio/i)).toHaveAttribute("href", "/about-us")
         expect(screen.getByText(/principal/i)).toHaveAttribute("href", "/")
         expect(screen.getByText(/contacto/i)).toHaveAttribute("href", "/contact")
     })
