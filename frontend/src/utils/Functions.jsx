@@ -4,6 +4,8 @@ export function isEven(number) {
 
 export function sectionParagraph(title, pb){
     return (
-        <p className={`text-6xl pl-7 pt-15 ${pb}`}>{title}</p>
+        <div className="text-center flex justify-center">
+            <p className={`text-3xl sm:text-4xl md:text-5xl xl:text-6xl pt-15 ${pb}`}>{title}</p>
+        </div>
     )
 }
