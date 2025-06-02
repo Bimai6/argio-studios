@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
-const ContactForm = () => {
+const ContactForm = ({className = ""}) => {
 
     const form = useRef();
 
@@ -41,7 +41,7 @@ const ContactForm = () => {
     
     return (
         <>
-            <form aria-label="contact form" className="contact-form flex flex-col mt-5 mr-5 mb-20 ml-8" onSubmit={sendEmail} ref={form}>
+            <form aria-label="contact form" className={`contact-form flex flex-col mt-5 mr-5 mb-20 ml-8 ${className}`} onSubmit={sendEmail} ref={form}>
                 {attributes.map((attribute, index) => (
                     <input className={`${stylesGeneric} ${stylesTextInput}`}
                     key={index} 
