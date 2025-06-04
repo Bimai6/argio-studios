@@ -1,6 +1,8 @@
 #!/bin/bash
 
-cd "$(dirname "$0")/frontend"
+cd "$(dirname "$0")/.."
+
+cd frontend/
 
 echo "Executing frontend tests with vitest..."
 
