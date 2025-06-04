@@ -85,13 +85,13 @@ cd argiobackend/
 python manage.py migrate
 ```
 
-### Step 7: Create a superuser for the admin interface:
+### Step 8: Create a superuser for the admin interface:
 
 ```
 python manage.py createsuperuser
 ```
 
-### Step 8: Run the development server
+### Step 9: Run the development server
 
 ```
 python manage.py runserver
@@ -136,23 +136,23 @@ After you have done the first time setup, you can make use of the scripts as sho
 -To run backend:
 
 ```
-./0_run_back.sh
+./scripts/0_run_back.sh
 ```
 
 -To run frontend:
 
 ```
-./1_run_front.sh
+./scripts/1_run_front.sh
 ```
 
 ### For testing you have:
 
 ```
-./2_run_tests_back.sh
+./scripts/2_run_tests_back.sh
 ```
 
 ```
-./3_run_tests_front.sh
+./scripts/3_run_tests_front.sh
 ```
 
 ---
