@@ -1,69 +1,52 @@
-# Installation Guide 📦
+![Argio Studios Logo](https://res.cloudinary.com/dr9vuz2td/image/upload/v1747914534/banner_vxlbcw.png)
 
-## Requirements
+# **Argio Studios Portfolio** 🎥🎞️
 
-Before starting, make sure you have the following installed:
-
-**General:**
-- Git  
-- Python 3.11.0 (make shure you have this one when you are running the `.venv`)  
-- Node.js 20.17.0 
-- PostgreSQL 
+**Argio Studios** is a multidisciplinary audiovisual production company specialized in **videography**, **photography**, **3D modeling**, and **graphic design**.  
+This full-stack web application showcases the studio’s work and provides a scalable foundation for content management and client presentation.  
+Built with a **Django** backend and a **React** frontend, and powered by a **PostgreSQL** database.
 
 ---
 
-## 1. Clone the Repository
+## 📌 **Table of Contents**
 
-Clone this repository to your local machine:
+1. [⚙️ Installation and Requirements](#installation-and-requirements)
+2. [🎨 App Design](#app-design)
+3. [🏗️ Project Architecture](#project-architecture)
+4. [💻 Technologies Used](#technologies-used)
+5. [📚 Libraries](#libraries)
+6. [🧪 Test Screenshots](#test-screenshots)
+7. [🚀 Next Steps](#next-steps)
+8. [🌐 Preview](#preview)
+9. [🔖 License](#license)
 
-```
+---
+
+## ⚙️ **Installation and Requirements**
+
+### **Prerequisites**
+Ensure the following are installed:
+
+- **Python 3.11.0**
+- **Node.js 20.17.0**
+- **PostgreSQL**
+- **Git**
+
+---
+
+### **Backend Setup**
+
+```bash
 git clone https://github.com/Bimai6/argio-studios-website.git
-```
-
----
-
-## 2. Set Up the Backend
-
-### Step 1: Navigate to the backend directory
-
-```
-cd backend
-```
-
-### Step 2: Create the virtual environment
-
-Make sure you're using the correct Python version posted above, then run:
-
-```
+cd argio-studios-website/backend
 python -m venv .venv
-```
-
-### Step 3: Activate the virtual environment
-
-On **Windows** (Command Prompt):
-
-```
-.venv\Scripts\activate
-```
-
-On **macOS/Linux**:
-
-```
-source .venv/bin/activate
-```
-
-### Step 4: Install dependencies
-
-```
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### Step 5: Create the `.env` file
+Create a `.env` file inside the `backend/` directory with the following content:
 
-Create a `.env` file inside the `backend/` directory.  
-This file should contain the following variables:
-
-```
+```env
 DB_NAME=argio_db
 DB_USER=argio_user
 DB_PASSWORD=supersecret
@@ -71,96 +54,188 @@ DB_HOST=localhost
 DB_PORT=5432
 ```
 
-### Step 6: Navigate to project folder
+Then, migrate and launch the backend server:
 
-(rootfolder/backend/argiobackend)
-
-```
+```bash
 cd argiobackend/
-```
-
-### Step 7: Run migrations
-
-```
 python manage.py migrate
-```
-
-### Step 8: Create a superuser for the admin interface:
-
-```
 python manage.py createsuperuser
-```
-
-### Step 9: Run the development server
-
-```
 python manage.py runserver
 ```
 
-The backend will be available at:
-http://127.0.0.1:8000/
+> Backend runs at: http://127.0.0.1:8000/
 
 ---
 
-## 3. Set Up the Frontend
+### **Frontend Setup**
 
-### Step 1: Navigate to the frontend directory
-
-```
-cd frontend
-```
-
-### Step 2: Install dependencies
-
-```
+```bash
+cd ../../frontend
 npm install
-```
-
-### Step 3: Run the frontend development server
-
-```
 npm run dev
 ```
 
+> Frontend runs at: http://localhost:5173/
+
 ---
 
-## 4. Running Tests 
+### **Scripts**
 
-### Ensure the `.env` file is present in `backend/`, and packages and dependencies are updated for both backend and frontend, then use the associated scripts listed on the following section.
----
+You can use the following scripts from the root directory:
 
-## Scripts
-
-After you have done the first time setup, you can make use of the scripts as shortcuts to run the server:
-
--To run backend:
-
-```
+- Start backend:
+```bash
 ./scripts/0_run_back.sh
 ```
 
--To run frontend:
-
-```
+- Start frontend:
+```bash
 ./scripts/1_run_front.sh
 ```
 
-### For testing you have:
-
-```
+- Run backend tests:
+```bash
 ./scripts/2_run_tests_back.sh
 ```
 
-```
+- Run frontend tests:
+```bash
 ./scripts/3_run_tests_front.sh
 ```
 
 ---
 
-## Notes
+## 🎨 **App Design**
 
-- Do not commit the `.env` file or `.venv/` directory.
-- Make sure PostgreSQL is installed and running locally (or accessible remotely).
-- Use the exact Python version if possible to match the `.venv`.
-- `.env` must live in `backend/`, not deeper.
 
+### 🖥️ Desktop Version  
+
+| Home Page | Catalogue Page | About Us Page | Contact Page |
+|-----------|----------------|------------------------|----------------|
+| [![Home Page](#)](#) | [![Catalogue Page](#)](#) | [![About Us Page](#)](#) | [![Contact Page](#)](#) |
+
+
+### 📱 Mobile Version  
+
+| Home Page | Catalogue Page | About Us Page | Contact Page |
+|-----------|----------------|---------------|--------------|
+| [![Home Page](#)](#) | [![Catalogue Page](#)](#) | [![About Us Page](#)](#) | [![Contact Page](#)](#) |
+
+---
+
+## 🏗️ **Project Architecture**
+
+```
+argio-studios-website/
+│
+├── backend/
+│   ├── argiobackend/
+│   ├── media/
+│   ├── requirements.txt
+│   └── .env
+│
+├── frontend/
+│   ├── public/
+│   └── src/
+│       ├── components/
+│       ├── pages/
+│       ├── context/
+│       └── router/
+│
+├── scripts/
+├── README.md
+└── ...
+```
+
+---
+
+## 💻 **Technologies Used**
+
+| Layer      | Stack                             |
+|------------|-----------------------------------|
+| Frontend   | React 19, Vite 6, TailwindCSS 4   |
+| Backend    | Django 5.2, DRF                   |
+| Database   | PostgreSQL                        |
+| Styling    | TailwindCSS                       |
+| Routing    | React Router 7                    |
+| API Calls  | Fetch                             |
+| Testing    | Vitest, Pytest                    |
+
+---
+
+## 📚 **Libraries**
+
+### ✅ Backend (`requirements.txt`)
+- **Django 5.2** - Web framework
+- **djangorestframework** - REST API
+- **django-cors-headers** - CORS handling
+- **django-extensions** - Extra dev tools
+- **django-filter** - Filtering support
+- **python-environ / dotenv** - Env var handling
+- **psycopg2-binary** - PostgreSQL driver
+- **colorama** - CLI color output
+- **sqlparse** - SQL formatting
+- **asgiref / tzdata** - Timezone / async support
+
+#### 🧪 Backend Testing
+- **coverage**, **pytest**, **pytest-django**, **pytest-cov**
+
+---
+
+### ✅ Frontend (`package.json`)
+
+#### Core
+- **react** `^19.0.0`
+- **react-dom**
+- **react-router-dom** `^7.6.0`
+
+#### Styling & Tools
+- **tailwindcss** `^4.1.6`
+- **@tailwindcss/vite`
+
+#### Media & UI
+- **@emailjs/browser** / **emailjs-com**
+- **medium-zoom**
+
+#### DevDependencies
+- **vite** `^6.2.0`
+- **@vitejs/plugin-react-swc**
+- **eslint**, **eslint-plugin-react-hooks**, **react-refresh**
+- **vitest**, **@vitest/coverage-v8**
+- **@testing-library/react / jest-dom**
+- **jsdom**, **globals**
+- **@types/react**, **@types/react-dom**
+
+---
+
+## 🧪 **Test Screenshots**
+
+> *(Replace with real image URLs if available)*
+
+| Feature         | Screenshot |
+|-----------------|------------|
+| Admin Panel     | ![Admin](#) |
+| API Endpoint    | ![API](#) |
+| Gallery View    | ![Gallery](#) |
+
+---
+
+## 🚀 **Next Steps**
+
+- Deploy backend and frontend with Docker
+- Add timeline when Argio Studios achieve more goals
+- Improve animations
+
+---
+
+## 🌐 **Preview**
+
+> Coming soon...
+
+---
+
+## 🔖 **License**
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
+---
