@@ -108,18 +108,19 @@ You can use the following scripts from the root directory:
 ## 🎨 **App Design**
 
 
-### 🖥️ Desktop Version  
+### 🖥️ **Desktop Version**
 
-| Home Page | Catalogue Page | About Us Page | Contact Page |
-|-----------|----------------|------------------------|----------------|
-| [![Home Page](#)](#) | [![Catalogue Page](#)](#) | [![About Us Page](#)](#) | [![Contact Page](#)](#) |
+| ![Home](https://res.cloudinary.com/dr9vuz2td/image/upload/v1749199407/Captura_de_pantalla_36_v0hc5z.png) | ![Catalogue](https://res.cloudinary.com/dr9vuz2td/image/upload/v1749199407/Captura_de_pantalla_37_lxyh4k.png) | ![About](https://res.cloudinary.com/dr9vuz2td/image/upload/v1749199407/Captura_de_pantalla_38_q7r9vz.png) | ![Contact](https://res.cloudinary.com/dr9vuz2td/image/upload/v1749199406/Captura_de_pantalla_39_owi3yd.png) |
+|:--:|:--:|:--:|:--:|
+| **Home Page** | **Catalogue Page** | **About Us Page** | **Contact Page** |
 
+---
 
-### 📱 Mobile Version  
+### 📱 **Mobile Version**
 
-| Home Page | Catalogue Page | About Us Page | Contact Page |
-|-----------|----------------|---------------|--------------|
-| [![Home Page](#)](#) | [![Catalogue Page](#)](#) | [![About Us Page](#)](#) | [![Contact Page](#)](#) |
+| ![Home Mobile](https://res.cloudinary.com/dr9vuz2td/image/upload/v1749199406/Captura_de_pantalla_40_kf45o8.png) | ![Catalogue Mobile](https://res.cloudinary.com/dr9vuz2td/image/upload/v1749199407/Captura_de_pantalla_43_mccyty.png) | ![About Mobile](https://res.cloudinary.com/dr9vuz2td/image/upload/v1749199406/Captura_de_pantalla_41_uaty1t.png) | ![Contact Mobile](https://res.cloudinary.com/dr9vuz2td/image/upload/v1749199408/Captura_de_pantalla_42_srmutc.png) |
+|:--:|:--:|:--:|:--:|
+| **Home Page** | **Catalogue Page** | **About Us Page** | **Contact Page** |
 
 ---
 
