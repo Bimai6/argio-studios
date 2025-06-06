@@ -131,17 +131,17 @@ argio-studios-website/
 │
 ├── backend/
 │   ├── argiobackend/
-│   ├── media/
 │   ├── requirements.txt
-│   └── .env
+│   ├── .env
+|   └── ...
 │
 ├── frontend/
 │   ├── public/
 │   └── src/
 │       ├── components/
 │       ├── pages/
-│       ├── context/
-│       └── router/
+│       ├── router/
+│       └── utils/
 │
 ├── scripts/
 ├── README.md
