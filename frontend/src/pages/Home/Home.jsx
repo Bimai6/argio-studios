@@ -25,7 +25,12 @@ const Home = () => {
                             <Link to={`/catalogue?content_type=${item.value}`}>{item.label}</Link>
                         </div>
                     ))}
-                    <div className="col-start-2 row-start-2"></div>
+                    <div className="col-start-2 row-start-2">
+                        <img 
+                        src="https://res.cloudinary.com/dr9vuz2td/image/upload/v1749557202/Argio_logo_Blanco_1_gnwzoq.svg" 
+                        alt="Argio Studios Logo" 
+                        className="w-full h-auto"/>
+                    </div>
                 </div>
                 <Nav />
             </div>
