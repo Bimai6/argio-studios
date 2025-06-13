@@ -6,7 +6,7 @@ import pytest
 def test_content_create(content_factory):
     content_instance = content_factory()
     assert content_instance.pk is not None
-    assert content_instance.title == "Inspirational Video"
+    assert content_instance.title == "Default title"
     assert content_instance.is_active is True
     assert isinstance(content_instance.created_at, timezone.datetime)
     assert str(content_instance) == content_instance.title
