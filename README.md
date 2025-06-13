@@ -15,10 +15,9 @@ Built with a **Django** backend and a **React** frontend, and powered by a **Pos
 3. [🏗️ Project Architecture](#project-architecture)
 4. [💻 Technologies Used](#technologies-used)
 5. [📚 Libraries](#libraries)
-6. [🧪 Test Screenshots](#test-screenshots)
-7. [🚀 Next Steps](#next-steps)
-8. [🌐 Preview](#preview)
-9. [🔖 License](#license)
+6. [🚀 Next Steps](#next-steps)
+7. [🌐 Preview](#preview)
+8. [🔖 License](#license)
 
 ---
 
@@ -206,18 +205,6 @@ argio-studios-website/
 - **@testing-library/react / jest-dom**
 - **jsdom**, **globals**
 - **@types/react**, **@types/react-dom**
-
----
-
-## 🧪 **Test Screenshots**
-
-> *(Replace with real image URLs if available)*
-
-| Feature         | Screenshot |
-|-----------------|------------|
-| Admin Panel     | ![Admin](#) |
-| API Endpoint    | ![API](#) |
-| Gallery View    | ![Gallery](#) |
 
 ---
 
