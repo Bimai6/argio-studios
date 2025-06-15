@@ -36,11 +36,11 @@ const ContentDetails = () => {
             ref={imageRef}
             src={content.thumbnail_url}
             alt={content.alt}
-            className="zoomable w-4/10 max-h-screen object-contain rounded-lg place-self-center cursor-zoom-in"
+            className="zoomable md:w-2/10 xl:w-4/10 max-h-screen object-contain rounded-lg place-self-center cursor-zoom-in"
         />
     ) : (
         <iframe 
-            className="w-5/10 h-2/3 rounded-lg place-self-center"
+            className="w-8/10 h-[250px] sm:w-8/10 sm:h-[300px] md:w-5/10 md:h-[420px] lg:w-5/10 lg:h-[475px] rounded-lg place-self-center"
             src={content.url}
             allowFullScreen
         />
@@ -48,17 +48,19 @@ const ContentDetails = () => {
 
     return (
         <>
-            <div className="h-screen flex flex-row max-w-full overflow-hidden p-4 gap-4">
+            <div className="min-h-screen flex flex-col md:flex-row max-w-full p-4 gap-4">
                 {urlElement}
-                <div className="flex-1 flex flex-col overflow-hidden text-right text-[#343434]">
+                <div className="flex-1 flex flex-col overflow-hidden text-right ml-15 mr-3 text-[#343434]">
                     <button
                         className="text-3xl self-end justify-self-start mb-10 rounded-full px-5 py-3 border-2 border-[#343434] hover:text-white hover:bg-[#343434]"
                         onClick={handleBack}
                     >
                         &lt;
                     </button>
-                    <h1 className="text-6xl font-bold mb-9">{content.title}</h1>
-                    <h2 className="text-xl">{content.description}</h2>
+                    <div >
+                        <h1 className="text-6xl font-bold mb-9">{content.title}</h1>
+                        <h2 className="text-xl">{content.description}</h2>
+                    </div>
                 </div>
             </div>
             <Nav />
