@@ -1,6 +1,7 @@
 import Nav from "../../components/Nav/Nav"
 import { Link } from "react-router"
 import { filterItems } from "../../utils/Arrays"
+import LogoAnimation from "../../components/LogoAnimation/LogoAnimation"
 
 const Home = () => {
     return (
@@ -26,10 +27,7 @@ const Home = () => {
                         </div>
                     ))}
                     <div className="col-start-2 row-start-2">
-                        <img 
-                        src="https://res.cloudinary.com/dr9vuz2td/image/upload/v1749557202/Argio_logo_Blanco_1_gnwzoq.svg" 
-                        alt="Argio Studios Logo" 
-                        className="w-full h-auto"/>
+                        <LogoAnimation width={"150%"}/>
                     </div>
                 </div>
                 <Nav />

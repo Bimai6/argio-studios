@@ -1,13 +1,16 @@
 import { Link, useLocation } from "react-router-dom";
+import LogoAnimation from "../LogoAnimation/LogoAnimation";
 
 const Nav = () => {
     const location = useLocation();
     const isHome = location.pathname === "/";
 
+    const genericItemStyle = "py-3 rounded-4xl text-xs sm:text-xl md:text-2xl xl:text-4xl";
+
     const navItems = [
-        { link: "/about-us", content: "argio", justify: "justify-start pl-4" },
-        { link: "/", content: "principal", justify: "justify-center" },
-        { link: "/contact", content: "contacto", justify: "justify-end pr-4" }
+        { link: "/about-us", content: "argio", justify: "justify-start pl-4", style: "px-8" },
+        { link: "/", content: <LogoAnimation width={"50%"}/>, justify: "justify-center", style: "px-4" },
+        { link: "/contact", content: "contacto", justify: "justify-end pr-4", style: "px-4"}
     ];
 
     return (
@@ -18,8 +21,8 @@ const Nav = () => {
                         const defaultLink = (
                             <Link
                                 to={item.link}
-                                className={`py-3 ${item.content === "argio" ? "px-8": "px-4"} rounded-4xl text-xs sm:text-xl md:text-2xl xl:text-4xl  ${
-                                    isHome ? "text-white bg-[#343434]" : "bg-[#D9D9D9]"
+                                className={`${genericItemStyle} ${item.style} ${
+                                    isHome ? "text-white bg-[#343434]" : item.link === "/" ? "" : "bg-[#D9D9D9]"
                                 }`}
                             >
                                 {item.content}
