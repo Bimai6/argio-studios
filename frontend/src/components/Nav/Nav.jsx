@@ -9,7 +9,7 @@ const Nav = () => {
 
     const navItems = [
         { link: "/about-us", content: "argio", justify: "justify-start pl-4", style: "px-8" },
-        { link: "/", content: <LogoAnimation width={"50%"}/>, justify: "justify-center", style: "px-4" },
+        { link: "/", content: <LogoAnimation width={"150px"}/>, justify: "justify-center", style: "px-4" },
         { link: "/contact", content: "contacto", justify: "justify-end pr-4", style: "px-4"}
     ];
 
