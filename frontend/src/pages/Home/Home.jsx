@@ -27,7 +27,7 @@ const Home = () => {
                         </div>
                     ))}
                     <div className="col-start-2 row-start-2">
-                        <LogoAnimation width={"150%"}/>
+                        <LogoAnimation width={"120%"}/>
                     </div>
                 </div>
                 <Nav />
