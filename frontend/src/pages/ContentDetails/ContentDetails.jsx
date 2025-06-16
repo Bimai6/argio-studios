@@ -36,7 +36,7 @@ const ContentDetails = () => {
             ref={imageRef}
             src={content.thumbnail_url}
             alt={content.alt}
-            className="zoomable md:w-2/10 xl:w-4/10 max-h-screen object-contain rounded-lg place-self-center cursor-zoom-in"
+            className="zoomable md:w-5/10 lg:w-4/10 max-h-screen object-contain rounded-lg place-self-center cursor-zoom-in"
         />
     ) : (
         <iframe 
@@ -50,16 +50,16 @@ const ContentDetails = () => {
         <>
             <div className="min-h-screen flex flex-col md:flex-row max-w-full p-4 gap-4">
                 {urlElement}
-                <div className="flex-1 flex flex-col overflow-hidden text-right ml-15 mr-3 text-[#343434]">
+                <div className={`flex-1 flex flex-col overflow-hidden text-right ${urlElement === isNotVideo ? "" : "ml-10"} md:ml-15 mr-3 text-[#343434]`}>
                     <button
-                        className="text-3xl self-end justify-self-start mb-10 rounded-full px-5 py-3 border-2 border-[#343434] hover:text-white hover:bg-[#343434]"
+                        className="mt-5 mb-20 md:mb-10 order-2 md:order-1 text-3xl self-end justify-self-start rounded-full px-5 py-3 border-2 border-[#343434] hover:text-white hover:bg-[#343434]"
                         onClick={handleBack}
                     >
                         &lt;
                     </button>
-                    <div >
-                        <h1 className="text-6xl font-bold mb-9">{content.title}</h1>
-                        <h2 className="text-xl">{content.description}</h2>
+                    <div className="order-1 md:order-2 mb-2">
+                        <h1 className="text-start text-4xl md:text-3xl lg:text-5xl xl:text-6xl font-bold mt-5 md:mt-1 mb-9">{content.title}</h1>
+                        <h2 className="text-start text-sm md:text-sm lg:text-lg xl:text-xl">{content.description}</h2>
                     </div>
                 </div>
             </div>
