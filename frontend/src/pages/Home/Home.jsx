@@ -22,7 +22,7 @@ const Home = () => {
             <div className="h-screen text-white relative z-50">
                 <div className="grid grid-cols-3 grid-rows-3 h-full place-items-center text-xl sm:text-2xl md:text-4xl xl:text-5xl">
                     {filterItems.map((item, index)=> (
-                        <div key={index} className={`text-center col-start-${item.col} row-start-${item.row}`}>
+                        <div key={index} className={`text-center col-start-${item.col} row-start-${item.row} hover:text-[#343434]`}>
                             <Link to={`/catalogue?content_type=${item.value}`}>{item.label}</Link>
                         </div>
                     ))}
