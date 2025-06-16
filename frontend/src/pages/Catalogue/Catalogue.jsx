@@ -21,7 +21,7 @@ const Catalogue = () => {
                 key={item.value}
                 onClick={() => handleChange(item.value)}
                 className={`px-4 py-2 text-2xl sm:text-xl md:text-2xl xl:text-4xl ${
-                contentType === item.value ? "rounded-4xl bg-[#343434] text-white" : ""
+                contentType === item.value ? "rounded-4xl bg-[#343434] text-white" : "hover:cursor-pointer hover:text-[#D9D9D9]"
                 }`}
                 >
                 {item.label}
