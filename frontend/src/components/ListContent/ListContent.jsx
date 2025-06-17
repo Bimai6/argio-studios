@@ -21,7 +21,7 @@ const ListContent = ({ contentType }) => {
   if (loading) return <p className="text-center">Cargando contenido...</p>;
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-20">
       {contents.length > 0 ? (
         contents.map((content) => (
           <div key={content.id} className="p-4 w-full">
