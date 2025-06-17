@@ -26,13 +26,18 @@ const ListContent = ({ contentType }) => {
         contents.map((content) => (
           <div key={content.id} className="p-4 w-full">
           <Link to={`/catalogue/${content.id}`} state={{ content: content }}>
-            <img
-              src={content.thumbnail_url}
-              alt={content.title}
-              className="max-w-120 w-full h-auto rounded-lg object-contain"
-            />
-          </Link>
-          </div>
+            <div className="relative group">
+      <img
+        src={content.thumbnail_url}
+        alt={content.title}
+        className="max-w-120 w-full h-auto rounded-lg object-contain saturate-0 brightness-150 group-hover:saturate-100 group-hover:brightness-100"
+      />
+      <div className="text-[#343434] text-2xl sm:text-3xl px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        {content.title}
+      </div>
+    </div>
+  </Link>
+</div>
         ))
       ) : (
           <p className="text-2xl sm:text-3xl xl:text-5xl mt-20 sm:mt-40 xl:mt-60 mx-10 text-center col-span-full">No hay contenido en esta categoría.</p>
