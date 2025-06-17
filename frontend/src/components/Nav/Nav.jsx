@@ -24,6 +24,7 @@ const Nav = () => {
                                 className={`${genericItemStyle} ${item.style} ${
                                     isHome ? "text-white bg-[#343434]" : item.link === "/" ? "" : "bg-[#D9D9D9]"
                                 }`}
+                                aria-label={typeof item.content === "string" ? undefined : "principal"}
                             >
                                 {item.content}
                             </Link>
