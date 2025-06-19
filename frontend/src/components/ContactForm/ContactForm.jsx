@@ -41,15 +41,22 @@ const ContactForm = ({className = ""}) => {
     
     return (
         <>
-            <form aria-label="contact form" className={`contact-form flex flex-col mt-5 mr-5 mb-20 ml-8 ${className}`} onSubmit={sendEmail} ref={form}>
+            <form aria-label="contact form" className={`contact-form flex flex-col mt-5 mr-10 mb-25 ml-8 ${className}`} onSubmit={sendEmail} ref={form}>
                 {attributes.map((attribute, index) => (
-                    <input className={`${stylesGeneric} ${stylesTextInput}`}
+                    <input 
+                    className={`${stylesGeneric} ${stylesTextInput}`}
                     key={index} 
                     {...attribute}
                     required />
                 ))}
-                <textarea className={`${stylesGeneric} ${stylesTextInput} h-20`} placeholder="mensaje" name="message" required></textarea>
-                <input className={`${stylesGeneric} bg-black mx-25`} type="submit" value="enviar" />
+                <textarea 
+                    className={`${stylesGeneric} ${stylesTextInput} h-20 whitespace-nowrap overflow-y-hidden resize-none`} 
+                    placeholder="mensaje" 
+                    name="message" 
+                    required
+                >
+                </textarea>
+                <input className={`${stylesGeneric} bg-black mx-25 hover:cursor-pointer`} type="submit" value="enviar" />
                 <input type="hidden" name="time" value={new Date().toLocaleString()} />
                 <input type="text" name="website" style={{ display: 'none' }} autoComplete="off" tabIndex="-1"/>
             </form>
