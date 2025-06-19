@@ -1,34 +1,36 @@
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { alertStructure } from "../../utils/Functions";
 
 const ContactForm = ({className = ""}) => {
 
     const form = useRef();
 
     const sendEmail = (e) => {
-        e.preventDefault();
+    e.preventDefault();
 
-        const websiteInput = form.current?.elements?.namedItem('website');
-        if (websiteInput?.value !== '') {
-            alert('Detectado envío automatizado. Inténtalo de nuevo.');
-            return;
+    const websiteInput = form.current?.elements?.namedItem("website");
+    if (websiteInput?.value !== "") {
+        alertStructure("warning", "detectado envío automatizado", "inténtalo de nuevo.")
+        return;
+    }
+
+    emailjs.sendForm(
+        "service_h19ns5s",
+        "template_m16i9jn",
+        form.current,
+        "0a0Ck9woOI2ZR9RZ1"
+    ).then(
+        () => {
+            alertStructure("success", "¡correo enviado!", "tu mensaje fue enviado con éxito.")
+            e.target.reset();
+        },
+        () => {
+            alertStructure("error", "error", "hubo un problema al enviar el correo.")
         }
+    );
+};
 
-        emailjs.sendForm(
-            "service_h19ns5s",    
-            "template_m16i9jn",   
-            form.current,
-            "0a0Ck9woOI2ZR9RZ1"    
-        ).then(
-            () => {
-                alert("Correo enviado con éxito");
-                e.target.reset();
-            },
-            () => {
-                alert("Error al enviar el correo");
-            }
-        );
-    };
 
     const attributes = [
         {type:"text", placeholder: "nombre completo", name:"full_name"},
@@ -58,7 +60,7 @@ const ContactForm = ({className = ""}) => {
                 </textarea>
                 <input className={`${stylesGeneric} bg-black mx-25 hover:cursor-pointer`} type="submit" value="enviar" />
                 <input type="hidden" name="time" value={new Date().toLocaleString()} />
-                <input type="text" name="website" style={{ display: 'none' }} autoComplete="off" tabIndex="-1"/>
+                <input type="text" name="website" style={{ display: "none" }} autoComplete="off" tabIndex="-1"/>
             </form>
         </>
     )
