@@ -21,14 +21,14 @@ const AboutUs = () => {
                         )
                     })}
                 </div>
-                {sectionParagraph("Team", "pb-15")}
+                {sectionParagraph("Equipo", "pb-15")}
                 {members.map((member,index) => {
                     return(
-                    <div key={index} className={`flex flex-col xl:flex-row items-center mt-15 x:mb-15 ${isEven(index) ? "place-self-start" : "place-self-end"}`}>
-                    <img src={member.img} alt={member.name} className={`max-h-150 ${isEven(index) ? "xl:pr-10" : "xl:order-2 xl:pl-10"}`}/>
+                    <div key={index} className={`flex flex-col xl:flex-row items-center mt-15 xl:mb-15 ${isEven(index) ? "place-self-start" : "place-self-end"}`}>
+                    <img src={member.img} alt={member.name} className={`saturate-0 brightness-75 hover:saturate-100 hover:brightness-100 max-h-150 ${isEven(index) ? "xl:pr-10 self-start" : "xl:order-2 xl:pl-10 self-end"}`}/>
                     <div className={`flex flex-col my-10 xl:order-1 ${isEven(index) ? "" : "text-end"}`}>
-                        <p className="text-4xl sm:text-[45px] md:text-[60px] xl:text-[80px] mb-3">{member.name}</p>
-                        <p className="text-2xl sm:text-4xl md:text-[45px] xl:text-[60px] mb-3">{member.role}</p>
+                        <p className="text-4xl sm:text-[45px] md:text-[60px] xl:text-[80px] mb-5 xl:mb-15">{member.name}</p>
+                        <p className="text-2xl sm:text-4xl md:text-[45px] xl:text-[60px] mb-5">{member.role}</p>
                         <div className="text-[#D9D9D9] text-xl sm:text-2xl md:text-4xl xl:text-5xl">
                             {member.tasks.map((task,index) => {
                                 return (<p className="py-3" key={index}>{task}</p>)
@@ -37,7 +37,7 @@ const AboutUs = () => {
                     </div>
                 </div>
                 ) })}
-                {sectionParagraph("Social", "xl:pb-25 md:pb-20 pb-10")}
+                {sectionParagraph("Redes", "xl:pb-25 md:pb-20 pb-10")}
                 <div className="flex flex-col md:flex-row justify-between gap-10 md:gap-40 xl:gap-80 text-xl sm:text-2xl md:text-4xl xl:text-5xl">
                     {socialLinks.map((socialLink, index) => {
                         return (

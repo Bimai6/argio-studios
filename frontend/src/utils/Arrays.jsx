@@ -20,7 +20,8 @@ export const aboutUsParagraph = [
 
 export const members = [
     { name: "Alvaro Jesús Ramírez", role: "Diseñador Líder", img: "https://res.cloudinary.com/dr9vuz2td/image/upload/v1747901490/1747901322297_ohokoa.jpg", tasks: ["videografía", "fotografía", "diseño 3d", "diseño gráfico"]},
-    { name: "Alvaro Jesús Ramírez", role: "Diseñador Líder", img: "https://res.cloudinary.com/dr9vuz2td/image/upload/v1747901490/1747901322297_ohokoa.jpg", tasks: ["videografía", "fotografía", "diseño 3d", "diseño gráfico"]}
+    { name: "Paula Redondo Borreguero", role: "Diseñadora Co-Líder", img: "https://res.cloudinary.com/dr9vuz2td/image/upload/v1750366062/d5e2d3fd-ff2d-477a-b8ad-d7379f75236d_sv8lui.jpg", tasks: ["ilustración", "tatuaje", "diseño gráfico"]},
+    { name: "Mario Lebrero García", role: "Asistente técnico", img: "https://res.cloudinary.com/dr9vuz2td/image/upload/v1750367550/000007.arw_1_rsmzxk.jpg", tasks: ["diseño web", "videografía", "iluminación"]}
 ];
 
 
