@@ -24,7 +24,7 @@ describe("<ContactForm />", () => {
   it("sends form correctly when valid", async () => {
     render(<ContactForm />)
 
-    fireEvent.change(screen.getByPlaceholderText(/nombre completo/i), {
+    fireEvent.change(screen.getByPlaceholderText(/nombre/i), {
       target: { value: "User" },
     })
     fireEvent.change(screen.getByPlaceholderText(/email/i), {

@@ -10,7 +10,7 @@ describe("<Nav />", () => {
                 <Nav />
             </MemoryRouter>
         );
-        expect(screen.queryByRole("link", { name: /principal/i })).toBeNull();
+        expect(screen.queryByRole("link", { name: /Enlace a página home/i })).toBeNull();
     });
 
     it("shows navigation links on other paths", () => {
@@ -20,7 +20,7 @@ describe("<Nav />", () => {
             </MemoryRouter>
         );
         expect(screen.getByRole("link", { name: /argio/i })).toHaveAttribute("href", "/about-us");
-        expect(screen.getByRole("link", { name: /principal/i })).toHaveAttribute("href", "/");
+        expect(screen.getByRole("link", { name: /Enlace a página home/i })).toHaveAttribute("href", "/");
         expect(screen.getByRole("link", { name: /contacto/i })).toHaveAttribute("href", "/contact");
     });
 });
