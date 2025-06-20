@@ -16,6 +16,12 @@ export const contactParagraph = [
     {text: "Si quieres proponernos una idea, iniciar una colaboración o simplemente saludarnos, por favor rellena este formulario. Nos pondremos en contacto contigo por correo lo antes posible."}
 ]
 
+export const contactAttributes = [
+    {type:"text", placeholder: "nombre", name:"name", role:"text", ariaLabel: "Introduce tu nombre completo"},
+    {type:"email", placeholder: "email", name:"email", pattern:"^[^\\s@]+@[^\\s@]+\\.(com|es|net|org|info)$", title: "Por favor, introduce un email con un dominio válido (.com, .es, .org, .net, .info)", role:"email", ariaLabel: "Introduce tu dirección de correo"},
+    {type:"text", placeholder: "asunto", name:"title", role:"text", ariaLabel: "Introduce el asunto del correo"}
+];
+
 export const aboutUsParagraph = [
     {text: `En Argio Studios creemos que la creatividad auténtica no tiene límites.
     Somos un estudio multidisciplinario donde las ideas se transforman en experiencias visuales, sonoras y emocionales. Trabajamos con pasión y estrategia para dar vida a proyectos que conectan: desde visuales potentes hasta narrativas que marcan.`},
@@ -29,7 +35,6 @@ export const members = [
     { name: "Paula Redondo Borreguero", role: "Diseñadora Co-Líder", img: "https://res.cloudinary.com/dr9vuz2td/image/upload/v1750366062/d5e2d3fd-ff2d-477a-b8ad-d7379f75236d_sv8lui.jpg", tasks: ["ilustración", "tatuaje", "diseño gráfico"]},
     { name: "Mario Lebrero García", role: "Asistente técnico", img: "https://res.cloudinary.com/dr9vuz2td/image/upload/v1750367550/000007.arw_1_rsmzxk.jpg", tasks: ["diseño web", "videografía", "iluminación"]}
 ];
-
 
 export const socialLinks = [
     { name: "instagram", link: "#"},

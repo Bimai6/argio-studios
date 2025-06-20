@@ -16,7 +16,10 @@ const Nav = () => {
     return (
         <>
             <nav className="fixed bottom-0 left-0 w-screen h-[110px] px-4">
-                <ul className="grid grid-cols-3 w-full h-full text-center">
+                <ul 
+                    className="grid grid-cols-3 w-full h-full text-center"
+                    aria-label="Lista con los elementos de la navegación"
+                >
                     {navItems.map((item, index) => {
                         const defaultLink = (
                             <Link
@@ -24,7 +27,7 @@ const Nav = () => {
                                 className={`${genericItemStyle} ${item.style} ${
                                     isHome ? "text-white bg-[#343434]" : item.link === "/" ? "" : "bg-[#D9D9D9]"
                                 }`}
-                                aria-label={typeof item.content === "string" ? undefined : "principal"}
+                                aria-label={typeof item.content === "string" ? `Enlace a la página ${item.content}` : "Enlace a página home"}
                             >
                                 {item.content}
                             </Link>

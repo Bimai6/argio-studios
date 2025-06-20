@@ -57,13 +57,9 @@ const LogoAnimation = ({width}) => {
       ref={canvasRef}
       width={320}
       height={180}
-      style={{
-        width,
-        height: "auto",
-        aspectRatio: "16 / 9",
-        objectFit: "contain",
-        justifySelf: "center"
-      }}
+      className={`h-auto aspect-video object-contain justify-self-center`}
+      style={{width}}
+      aria-label="Animación del logo de Argio Studios"
     />
   );
 };
