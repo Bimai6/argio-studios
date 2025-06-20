@@ -11,7 +11,7 @@ const ContactForm = ({className = ""}) => {
 
     const websiteInput = form.current?.elements?.namedItem("website");
     if (websiteInput?.value !== "") {
-        alertStructure("warning", "detectado envío automatizado", "inténtalo de nuevo.")
+        alertStructure("warning", "Detectado envío automatizado", "Inténtalo de nuevo.")
         return;
     }
 
@@ -22,11 +22,11 @@ const ContactForm = ({className = ""}) => {
         "0a0Ck9woOI2ZR9RZ1"
     ).then(
         () => {
-            alertStructure("success", "¡correo enviado!", "tu mensaje fue enviado con éxito.")
+            alertStructure("success", "¡Correo enviado!", "Tu mensaje fue enviado con éxito.")
             e.target.reset();
         },
         () => {
-            alertStructure("error", "error", "hubo un problema al enviar el correo.")
+            alertStructure("error", "Error", "Hubo un problema al enviar el correo.")
         }
     );
 };
