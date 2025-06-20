@@ -10,8 +10,8 @@ describe("<ListContent />", () => {
 
   it("renders items fetched from API", async () => {
     const fakeItems = [
-      { id: 1, title: "Title 1", thumbnail_url: "thumb1.png" },
-      { id: 2, title: "Title 2", thumbnail_url: "thumb2.png" },
+      { id: 1, title: "Title 1", thumbnail_url: "thumb1.png", alt: "Title 1" },
+      { id: 2, title: "Title 2", thumbnail_url: "thumb2.png", alt: "Title 2" },
     ];
 
     vi.spyOn(window, "fetch").mockResolvedValue({
