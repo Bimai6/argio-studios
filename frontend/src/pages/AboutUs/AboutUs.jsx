@@ -10,9 +10,11 @@ const AboutUs = () => {
         <>
             <div data-testid="page-about-us" className="flex flex-col place-items-center px-20">
                 <div className="flex flex-row justify-center bg-black w-screen">
-                    <img src="https://res.cloudinary.com/dr9vuz2td/image/upload/v1747914534/banner_vxlbcw.png" alt="Argio Studios' Banner" className="pt-12 pb-16"/>
+                    <img src="https://res.cloudinary.com/dr9vuz2td/image/upload/v1750433113/b5d23298-3c9b-42b1-98c6-e6df61258ca4_dmg7pn.jpg"
+                    alt="Argio Studios' Banner" 
+                    className="w-7/8"/>
                 </div>
-                <div className="text-xl sm:text-2xl md:text-3xl xl:text-4xl pb-7 pt-20">
+                <div className="text-xl sm:text-2xl md:text-3xl xl:text-4xl pb-7 pt-10 md:pt-20">
                     {aboutUsParagraph.map((item, index) => {
                         return(
                             <>
@@ -25,7 +27,9 @@ const AboutUs = () => {
                 {members.map((member,index) => {
                     return(
                     <div key={index} className={`flex flex-col xl:flex-row items-center mt-15 xl:mb-15 ${isEven(index) ? "place-self-start" : "place-self-end"}`}>
-                    <img src={member.img} alt={member.name} className={`saturate-0 brightness-75 hover:saturate-100 hover:brightness-100 max-h-150 ${isEven(index) ? "xl:pr-10 self-start" : "xl:order-2 xl:pl-10 self-end"}`}/>
+                    <img src={member.img} 
+                    alt={member.name} 
+                    className={`saturate-0 brightness-75 hover:saturate-100 hover:brightness-100 max-h-150 ${isEven(index) ? "xl:pr-10 self-start" : "xl:order-2 xl:pl-10 self-end"}`}/>
                     <div className={`flex flex-col my-10 xl:order-1 ${isEven(index) ? "" : "text-end"}`}>
                         <p className="text-4xl sm:text-[45px] md:text-[60px] xl:text-[80px] mb-5 xl:mb-15">{member.name}</p>
                         <p className="text-2xl sm:text-4xl md:text-[45px] xl:text-[60px] mb-5">{member.role}</p>
