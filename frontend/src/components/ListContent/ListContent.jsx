@@ -38,7 +38,7 @@ const ListContent = ({ contentType }) => {
                   <div className="group relative">
                     <img
                       src={content.thumbnail_url}
-                      alt={content.title}
+                      alt={content.alt}
                       className="max-w-120 w-full h-auto rounded-lg object-contain saturate-0 brightness-150 group-hover:saturate-100 group-hover:brightness-100 group-focus:saturate-100 group-focus:brightness-100"
                     />
                     <div className="bg-white bg-opacity-75 text-[#343434] text-2xl sm:text-3xl px-2 py-1 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300 absolute bottom-0 left-0 right-0">
