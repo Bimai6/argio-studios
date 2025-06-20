@@ -191,11 +191,12 @@ argio-studios-website/
 
 #### Styling & Tools
 - **tailwindcss** `^4.1.6`
-- **@tailwindcss/vite`
+- **@tailwindcss/vite`**
 
 #### Media & UI
 - **@emailjs/browser** / **emailjs-com**
 - **medium-zoom**
+- **sweetalert2** `^11.22.0`
 
 #### DevDependencies
 - **vite** `^6.2.0`
@@ -212,7 +213,8 @@ argio-studios-website/
 
 - Deploy backend and frontend with Docker
 - Add timeline when Argio Studios achieve more goals
-- Improve animations
+- Improve animations.
+- Improve design material chosen and their integrations.
 
 ---
 
