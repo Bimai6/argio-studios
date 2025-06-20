@@ -109,7 +109,7 @@ You can use the following scripts from the root directory:
 
 ### 🖥️ **Desktop Version**
 
-| ![Home](https://res.cloudinary.com/dr9vuz2td/image/upload/v1749199407/Captura_de_pantalla_36_v0hc5z.png) | ![Catalogue](https://res.cloudinary.com/dr9vuz2td/image/upload/v1749199407/Captura_de_pantalla_37_lxyh4k.png) | ![About](https://res.cloudinary.com/dr9vuz2td/image/upload/v1749199407/Captura_de_pantalla_38_q7r9vz.png) | ![Contact](https://res.cloudinary.com/dr9vuz2td/image/upload/v1749199406/Captura_de_pantalla_39_owi3yd.png) |
+| ![Home](https://res.cloudinary.com/dr9vuz2td/image/upload/v1750441870/Captura_de_pantalla_44_w2adhg.png) | ![Catalogue](https://res.cloudinary.com/dr9vuz2td/image/upload/v1750441870/Captura_de_pantalla_47_hhe80e.png) | ![About](https://res.cloudinary.com/dr9vuz2td/image/upload/v1750441871/Captura_de_pantalla_46_svhxm4.png) | ![Contact](https://res.cloudinary.com/dr9vuz2td/image/upload/v1750441870/Captura_de_pantalla_45_sgckjm.png) |
 |:--:|:--:|:--:|:--:|
 | **Home Page** | **Catalogue Page** | **About Us Page** | **Contact Page** |
 
@@ -117,7 +117,7 @@ You can use the following scripts from the root directory:
 
 ### 📱 **Mobile Version**
 
-| ![Home Mobile](https://res.cloudinary.com/dr9vuz2td/image/upload/v1749199406/Captura_de_pantalla_40_kf45o8.png) | ![Catalogue Mobile](https://res.cloudinary.com/dr9vuz2td/image/upload/v1749199407/Captura_de_pantalla_43_mccyty.png) | ![About Mobile](https://res.cloudinary.com/dr9vuz2td/image/upload/v1749199406/Captura_de_pantalla_41_uaty1t.png) | ![Contact Mobile](https://res.cloudinary.com/dr9vuz2td/image/upload/v1749199408/Captura_de_pantalla_42_srmutc.png) |
+| ![Home Mobile](https://res.cloudinary.com/dr9vuz2td/image/upload/v1750441870/Captura_de_pantalla_48_kvmrmm.png) | ![Catalogue Mobile](https://res.cloudinary.com/dr9vuz2td/image/upload/v1750441870/Captura_de_pantalla_51_ldtezr.png) | ![About Mobile](https://res.cloudinary.com/dr9vuz2td/image/upload/v1750441870/Captura_de_pantalla_50_tovvrl.png) | ![Contact Mobile](https://res.cloudinary.com/dr9vuz2td/image/upload/v1750441870/Captura_de_pantalla_49_svk2ht.png) |
 |:--:|:--:|:--:|:--:|
 | **Home Page** | **Catalogue Page** | **About Us Page** | **Contact Page** |
 
