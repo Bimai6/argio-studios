@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import Nav from "../../components/Nav/Nav"
-import { Link } from "react-router"
+import { Link } from "react-router-dom"
 import { filterItems } from "../../utils/Arrays"
 import LogoAnimation from "../../components/LogoAnimation/LogoAnimation"
 import { videoList } from "../../utils/Arrays"
@@ -38,6 +38,7 @@ const Home = () => {
     <>
       <video
         data-testid="page-home"
+        key={shuffledVideos[currentVideoIndex]}
         ref={videoRef}
         className="fixed top-0 left-0 w-full h-full object-cover -z-20"
         autoPlay
@@ -47,16 +48,21 @@ const Home = () => {
         <source src={shuffledVideos[currentVideoIndex]} type="video/mp4" />
       </video>
 
-      <div className="fixed top-0 left-0 w-full h-full bg-black opacity-60 -z-10"></div>
+      <div className="fixed top-0 left-0 w-full h-full bg-black opacity-60 -z-10"/>
 
-      <div className="h-screen text-white relative z-50">
+      <main className="h-screen text-white relative z-50" role="main">
         <div className="grid grid-cols-3 grid-rows-3 h-full place-items-center text-xl sm:text-2xl md:text-4xl xl:text-5xl">
           {filterItems.map((item, index) => (
             <div
               key={index}
+              role="navigation"
+              aria-label="Tipos de contenido"
               className={`text-center col-start-${item.col} row-start-${item.row} hover:text-[#343434]`}
             >
-              <Link to={`/catalogue?content_type=${item.value}`}>
+              <Link
+                to={`/catalogue?content_type=${item.value}`}
+                aria-label={`Ir a contenido de tipo ${item.label}`}
+              >
                 {item.label}
               </Link>
             </div>
@@ -66,7 +72,7 @@ const Home = () => {
           </div>
         </div>
         <Nav />
-      </div>
+      </main>
     </>
   )
 }

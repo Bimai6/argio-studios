@@ -15,16 +15,21 @@ const Catalogue = () => {
 
     return (
     <>
-        <div data-testid="page-catalogue" className="ml-10 sm:ml-0 flex flex-col items-start sm:flex-row sm:justify-between p-4">
+        <div 
+            data-testid="page-catalogue" 
+            className="ml-10 sm:ml-0 flex flex-col items-start sm:flex-row sm:justify-between p-4"
+            aria-label="Catálogo de contenidos de Argio Studios"
+        >
             {filterItems.map((item) => (
                 <button
-                key={item.value}
-                onClick={() => handleChange(item.value)}
-                className={`px-4 py-2 text-2xl sm:text-xl md:text-2xl xl:text-4xl ${
-                contentType === item.value ? "rounded-4xl bg-[#343434] text-white" : "hover:cursor-pointer hover:text-[#D9D9D9]"
-                }`}
+                    key={item.value}
+                    onClick={() => handleChange(item.value)}
+                    className={`px-4 py-2 text-2xl sm:text-xl md:text-2xl xl:text-4xl 
+                        ${contentType === item.value ? "rounded-4xl bg-[#343434] text-white" : "hover:cursor-pointer hover:text-[#D9D9D9]"}`}
+                    aria-label={`Filtro por contenido de tipo ${item.label}`}
+                    aria-pressed={contentType === item.value}
                 >
-                {item.label}
+                    {item.label}
                 </button>
             ))}
         </div>

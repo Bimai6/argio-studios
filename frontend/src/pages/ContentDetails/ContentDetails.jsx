@@ -48,12 +48,16 @@ const ContentDetails = () => {
 
     return (
         <>
-            <div className="min-h-screen flex flex-col md:flex-row max-w-full p-4 gap-4">
+            <div 
+            className="min-h-screen flex flex-col md:flex-row max-w-full p-4 gap-4"
+            aria-label={`Página con los detalles del contenido ${content.title}`} 
+            >
                 {urlElement}
                 <div className={`flex-1 flex flex-col overflow-hidden text-right ${urlElement === isNotVideo ? "" : "ml-10"} md:ml-15 mr-3 text-[#343434]`}>
                     <button
                         className="mt-5 mb-20 md:mb-10 order-2 md:order-1 text-3xl self-end justify-self-start rounded-full px-5 py-3 border-2 border-[#343434] hover:text-white hover:bg-[#343434]"
                         onClick={handleBack}
+                        aria-label="Botón de volver a la página del Catálogo"
                     >
                         &lt;
                     </button>

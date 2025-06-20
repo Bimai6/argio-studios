@@ -19,6 +19,13 @@ export function alertStructure(icon, title, text){
                 text: text,
                 confirmButtonColor: '#000',
                 confirmButtonText: 'Cerrar',
+                didOpen: () => {
+                    const popup = Swal.getPopup();
+                    if (popup) {
+                        popup.setAttribute("role", "alert");
+                        popup.setAttribute("aria-live", "assertive");
+                    }
+                }
             });
 }
 
