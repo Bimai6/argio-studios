@@ -5,6 +5,12 @@ export const filterItems = [
     { label: "fotos", value: "1", col: "3", row: "2" },
 ];
 
+export const videoList = [
+    "/videos/background_home_1.mp4",
+    "/videos/background_home_2.mp4",
+    "/videos/background_home_3.mp4",
+]
+
 export const contactParagraph = [
     {text: "En Argio Studios siempre estamos abiertos a nuevas oportunidades creativas o simplemente a conectar con personas interesantes. "},
     {text: "Si quieres proponernos una idea, iniciar una colaboración o simplemente saludarnos, por favor rellena este formulario. Nos pondremos en contacto contigo por correo lo antes posible."}

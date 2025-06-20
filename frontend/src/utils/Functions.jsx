@@ -18,6 +18,10 @@ export function alertStructure(icon, title, text){
                 title: title,
                 text: text,
                 confirmButtonColor: '#000',
-                confirmButtonText: 'cerrar',
+                confirmButtonText: 'Cerrar',
             });
+}
+
+export const shuffleArray = (arr) => {
+    return [...arr].sort(() => Math.random() - 0.5)
 }
