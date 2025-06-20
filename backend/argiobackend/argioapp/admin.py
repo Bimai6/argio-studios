@@ -9,11 +9,6 @@ class ContentAdmin(admin.ModelAdmin):
     search_fields = ('title', 'description')  
     list_filter = ('is_active', )
 
-    def has_delete_permission(self, request, obj=None):
-        if request.user.groups.filter(name='SuperAdmin').exists():
-            return True
-        return False  
-
     def save_model(self, request, obj, form, change):
         set_current_user(request.user)
         super().save_model(request, obj, form, change)

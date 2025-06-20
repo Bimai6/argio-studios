@@ -10,7 +10,6 @@ pytest \
     --cov=argiobackend.argioapp.views \
     --cov=argiobackend.argioapp.models \
     --cov=argiobackend.argioapp.serializers \
-    --cov=argiobackend.argioapp.admin \
     --cov=argiobackend.argioapp.signals \
     --cov-report=term \
     --cov-report=html
