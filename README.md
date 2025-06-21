@@ -27,8 +27,7 @@ Built with a **Django** backend and a **React** frontend, and powered by a **Pos
 Ensure the following are installed:
 
 - **Python 3.11.0**
-- **Django 5.2.0**
-- **React 19.0.0**
+- **Node.js 20.17.0**
 - **PostgreSQL**
 - **Git**
 
