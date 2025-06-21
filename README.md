@@ -28,6 +28,7 @@ Ensure the following are installed:
 
 - **Python 3.11.0**
 - **Django 5.2.0**
+- **React 19.0.0**
 - **PostgreSQL**
 - **Git**
 
