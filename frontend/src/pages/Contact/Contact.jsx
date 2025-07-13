@@ -1,6 +1,6 @@
-import ContactForm from "../../components/ContactForm/ContactForm"
-import Nav from "../../components/Nav/Nav"
-import { contactParagraph } from "../../utils/Arrays";
+import ContactForm from "@/components/ContactForm/ContactForm"
+import Nav from "@/components/Nav/Nav"
+import { contactParagraph } from "@/utils/Arrays";
 
 const Contact = () => {
 

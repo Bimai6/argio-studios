@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import LogoAnimation from "../LogoAnimation/LogoAnimation";
+import LogoAnimation from "@/components/LogoAnimation/LogoAnimation";
 
 const Nav = () => {
     const location = useLocation();

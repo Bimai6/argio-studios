@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react"
-import Nav from "../../components/Nav/Nav"
+import Nav from "@/components/Nav/Nav"
 import { Link } from "react-router-dom"
-import { filterItems } from "../../utils/Arrays"
-import LogoAnimation from "../../components/LogoAnimation/LogoAnimation"
-import { videoList } from "../../utils/Arrays"
-import { shuffleArray } from "../../utils/Functions"
+import { filterItems } from "@/utils/Arrays"
+import LogoAnimation from "@/components/LogoAnimation/LogoAnimation"
+import { videoList } from "@/utils/Arrays"
+import { shuffleArray } from "@/utils/Functions"
 
 const Home = () => {
   const videoRef = useRef(null)

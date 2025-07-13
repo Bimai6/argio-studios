@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import ListContent from "../../components/ListContent/ListContent";
-import Nav from "../../components/Nav/Nav";
-import {filterItems} from "../../utils/Arrays";
+import ListContent from "@/components/ListContent/ListContent";
+import Nav from "@/components/Nav/Nav";
+import {filterItems} from "@/utils/Arrays";
 
 const Catalogue = () => {
     const location = useLocation();

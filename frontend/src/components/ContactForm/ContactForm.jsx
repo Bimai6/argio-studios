@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { alertStructure } from "../../utils/Functions";
-import { contactAttributes } from "../../utils/Arrays";
+import { alertStructure } from "@/utils/Functions";
+import { contactAttributes } from "@/utils/Arrays";
 
 const ContactForm = ({className = ""}) => {
 

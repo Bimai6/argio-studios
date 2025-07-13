@@ -1,8 +1,8 @@
-import Nav from "../../components/Nav/Nav"
-import { isEven } from "../../utils/Functions"
-import { aboutUsParagraph, members } from "../../utils/Arrays"
-import { sectionParagraph } from "../../utils/Functions"
-import { socialLinks } from "../../utils/Arrays"
+import Nav from "@/components/Nav/Nav"
+import { isEven } from "@/utils/Functions"
+import { aboutUsParagraph, members } from "@/utils/Arrays"
+import { sectionParagraph } from "@/utils/Functions"
+import { socialLinks } from "@/utils/Arrays"
 
 const AboutUs = () => {
 

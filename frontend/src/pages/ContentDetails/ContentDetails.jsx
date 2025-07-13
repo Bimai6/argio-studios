@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from "react-router";
 import { useEffect, useRef } from "react";
-import Nav from "../../components/Nav/Nav";
+import Nav from "@/components/Nav/Nav";
 import mediumZoom from 'medium-zoom';
 
 const ContentDetails = () => {
