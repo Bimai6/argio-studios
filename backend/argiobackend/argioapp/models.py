@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.db import transaction
 from urllib.parse import urlparse, parse_qs
 
 class Content(models.Model):
@@ -18,11 +19,25 @@ class Content(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     is_active = models.BooleanField(default=True)
     alt = models.CharField(max_length=50)
+    grid_order = models.PositiveIntegerField(help_text="Define order within the content type selected.",)
 
     def save(self, *args, **kwargs):
         if self.content_type == self.ContentType.VIDEO:
             self.url = self._format_video_url(self.url)
+
+        with transaction.atomic():
+            if self.grid_order is not None:
+                conflict_qs = Content.objects.filter(
+                    content_type=self.content_type,
+                    grid_order__gte=self.grid_order
+                ).exclude(pk=self.pk).order_by('-grid_order')
+
+            for obj in conflict_qs:
+                obj.grid_order += 1
+                obj.save()
+
         super().save(*args, **kwargs)
+
 
     def _format_video_url(self, original_url):
         parsed_url = urlparse(original_url)
