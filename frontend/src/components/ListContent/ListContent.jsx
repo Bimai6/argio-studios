@@ -13,6 +13,7 @@ const ListContent = ({ contentType }) => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
+        console.log("Datos recibidos:", data.results);
         setContents(data.results);
         setLoading(false);
       });
@@ -25,7 +26,9 @@ const ListContent = ({ contentType }) => {
       ) : (
         <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-20">
           {contents.length > 0 ? (
-            contents.map((content) => (
+            contents
+            .sort((a,b) => a.grid_order - b.grid_order)
+            .map((content) => (
               <li 
               key={content.id} 
               className="p-4 w-full"
