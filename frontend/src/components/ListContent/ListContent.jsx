@@ -13,7 +13,6 @@ const ListContent = ({ contentType }) => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
-        console.log("Datos recibidos:", data.results);
         setContents(data.results);
         setLoading(false);
       });
