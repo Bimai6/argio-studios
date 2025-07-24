@@ -7,8 +7,8 @@ const ListContent = ({ contentType }) => {
 
   useEffect(() => {
     if (!contentType) return;
-
-    const url = `${process.env.REACT_APP_API_URL}/api/contents/?content_type=${contentType}`;
+    
+    const url = `${import.meta.env.VITE_API_URL}/api/contents/?content_type=${contentType}`;
 
     fetch(url)
       .then((res) => res.json())
