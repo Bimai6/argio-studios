@@ -1,0 +1,10 @@
+{
+  "routes": [
+    { "src": "^/$", "dest": "/index.html" },
+    { "src": "^/catalogue$", "dest": "/index.html" },
+    { "src": "^/about-us$", "dest": "/index.html" },
+    { "src": "^/contact$", "dest": "/index.html" },
+    { "src": "^/catalogue/.*$", "dest": "/index.html" }
+  ]
+}
+
