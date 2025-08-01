@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 
 const frameCount = 150;
 const getImagePath = (index) =>
-  `/images/animated_logo/${String(index + 1).padStart(4, "0")}.png`;
+  `/images/animated_logo/${String(index + 1).padStart(4, "0")}.webp`;
 
 const LogoAnimation = ({width}) => {
   const canvasRef = useRef(null);
